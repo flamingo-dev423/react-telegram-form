@@ -9,8 +9,8 @@ const port = 5000;
 app.use(bodyParser.json()); // To parse incoming JSON data
 app.use(cookieParser()); // To parse cookies
 
-const TELEGRAM_TOKEN = '8136814064:AAF5Ym2dIhb1N2vEKGq0LCkYIQofkNvZfj8'; // Replace with your Telegram Bot API token
-const CHAT_ID = '1313109933'; // Replace with your Telegram chat ID (can be a user or group ID)
+const TELEGRAM_TOKEN = process.env.TELEGRAM_TOKEN; // Replace with your Telegram Bot API token
+const CHAT_ID = process.env.CHAT_ID; // Replace with your Telegram chat ID (can be a user or group ID)
 
 const cors = require("cors");
 app.use(cors({
