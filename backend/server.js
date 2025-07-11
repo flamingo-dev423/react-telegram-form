@@ -14,7 +14,11 @@ const CHAT_ID = process.env.CHAT_ID; // Replace with your Telegram chat ID (can 
 
 const cors = require("cors");
 app.use(cors({
-    origin: "http://localhost:5173", // Replace with your React app's URL
+    origin: [
+        "https://react-telegram-form-5.onrender.com", // Replace with your React app's URL
+        "https://react-telegram-form-4.onrender.com", // Replace with your React app's URL
+        "http://localhost:3000", // Local development URL
+    ],
     methods: "GET,POST",
     credentials: true, // Allow credentials (cookies) to be sent
     optionsSuccessStatus: 200, // For legacy browser support
